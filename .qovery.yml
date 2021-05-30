@@ -1,0 +1,11 @@
+---
+application:
+  name: "welcome-bot"
+  project: "BaalKrshna"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-welcome-bot"
+  routes:
+  - application_name: "welcome-bot"
+    paths:
+    - "/*"
