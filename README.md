@@ -12,6 +12,9 @@
 
 If You're not sure what prefix is used can you just mention the bot (`@welcome#0914`) and it will tell you what prefix is used.
 
+Commands:
+1. `!w ping` - Ping the bot.
+
 ## Inviting the bot
 The bot requires the following permissions:
 - Read messages
