@@ -5,7 +5,7 @@ const prefix = "!w ";
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.setActivity(`Watching ${client.guilds.cache.size} servers`);
+    client.user.setActivity(`Watching ${client.guilds.cache.size} servers`);
 });
 
 client.on("guildMemberAdd", (member) => {
