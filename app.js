@@ -8,7 +8,9 @@ client.on('ready', () => {
 });
 
 client.on("guildMemberAdd", (member) => {
-    member.guild.channels.get('channelID').send("Welcome" + member.user.username);
+  const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
+  if (!channel) return;
+  channel.send(`Welcome, ${member}`);
 });
 
 client.on("message", function(message) {
