@@ -1,8 +1,19 @@
+/**
+ * Discord Welcome bot
+ * Copyright (c) 2021 The BaalKrshna Team and Contributors
+ * Licensed under Lesser General Public License v2.1 (LGPl-2.1 - https://opensource.org/licenses/lgpl-2.1.php)
+ */
 const Discord = require("discord.js");
-const config = require("../config.json");
+
+const result = require('dotenv').config();
+if (result.error) {
+  throw result.error;
+}
+console.log(result.parsed);
+
 const client = new Discord.Client();
 const prefix = "!w ";
-const updatePresense = function () {
+const presense = function () {
     const servers = client.guilds.cache.size;
     console.log(`Updating presence. Servers: ${servers}`);
     client.user
@@ -16,8 +27,12 @@ const updatePresense = function () {
 };
 
 client.on("ready", () => {
+    // We logged in
     console.log(`Logged in as ${client.user.tag}!`);
-    updatePresense();
+    presense();
+    // 15 * 60 * (1 second)
+    // Update presence every 15 minutes
+    setInterval(() => presence(), 15 * 60 * 1000);
 });
 
 client.on("guildMemberAdd", (member) => {
@@ -40,4 +55,5 @@ client.on("message", function (message) {
     }
 });
 
-client.login(config.BOT_TOKEN);
+// Login
+client.login(process.env.BOT_TOKEN);
