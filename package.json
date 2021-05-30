@@ -2,7 +2,7 @@
   "name": "welcome",
   "version": "1.0.0",
   "description": "Welcome users when they join your discord server",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "format:check": "prettier --check .",
     "format": "prettier --write ."

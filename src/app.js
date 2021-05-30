@@ -2,9 +2,7 @@ const Discord = require("discord.js");
 const config = require("./config.json");
 const client = new Discord.Client();
 const prefix = "!w ";
-
-client.on("ready", () => {
-    console.log(`Logged in as ${client.user.tag}!`);
+const updatePresense = function () {
     const servers = client.guilds.cache.size;
     console.log(`Updating presence. Servers: ${servers}`);
     client.user
@@ -15,6 +13,11 @@ client.on("ready", () => {
             },
         })
         .catch((error) => console.error(error));
+};
+
+client.on("ready", () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+    updatePresense();
 });
 
 client.on("guildMemberAdd", (member) => {
