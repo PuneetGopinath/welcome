@@ -7,6 +7,11 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](https://github.com/PuneetGopinath/welcome/blob/main/.github/CODE_OF_CONDUCT.md)
 [![Discord Chat](https://img.shields.io/discord/836854115526770708?color=7289da&label=discord)](https://discord.gg/6HWjd4B46x)
 
+## Commands
+> Prefix: `!w`
+
+If You're not sure what prefix is used can you just mention the bot (`@welcome#0914`) and it will tell you what prefix is used.
+
 ## Inviting the bot
 The bot requires the following permissions:
 - Read messages

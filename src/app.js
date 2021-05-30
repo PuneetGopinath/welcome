@@ -45,6 +45,10 @@ client.on("guildMemberAdd", (member) => {
 
 client.on("message", function (message) {
     if (message.author.bot) return;
+    //https://discord.js.org/#/docs/main/v11/class/Message?scrollTo=isMemberMentioned
+    if (message.isMemberMentioned(client.user)) {
+        message.channel.send(`Hi there, ${message.author}\nMy prefix is ${prefix}.`);
+    };
     if (!message.content.startsWith(prefix)) return;
 
     const commandBody = message.content.slice(prefix.length);
