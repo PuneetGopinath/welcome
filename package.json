@@ -24,5 +24,8 @@
   "homepage": "https://github.com/PuneetGopinath/welcome#readme",
   "dependencies": {
     "discord.js": "^12.5.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.0"
   }
 }
