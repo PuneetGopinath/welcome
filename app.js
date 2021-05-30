@@ -5,7 +5,15 @@ const prefix = "!w ";
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setActivity(`Watching ${client.guilds.cache.size} servers`);
+    const servers = client.guilds.cache.size;
+    console.log(`Updating presence. Servers: ${servers}`);
+    client.user.setPresence({
+        activity: {
+            name: `${servers} server${servers > 1 ? 's' : ''}`,
+            type: 'WATCHING',
+        },
+    })
+    .catch(error => console.error(error));
 });
 
 client.on("guildMemberAdd", (member) => {
