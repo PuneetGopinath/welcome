@@ -48,7 +48,7 @@ client.on("message", function (message) {
     //https://discord.js.org/#/docs/main/v11/class/Message?scrollTo=isMemberMentioned
     if (message.mentions.has(client.user)) {
         message.channel.send(
-            `Hi there, ${message.author}\nMy prefix is ${prefix.trim()}.`
+            `Hi there, ${message.author}\nMy prefix is ${prefix.trim()}`
         );
     }
     if (!message.content.startsWith(prefix)) return;
