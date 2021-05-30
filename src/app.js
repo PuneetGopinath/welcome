@@ -13,7 +13,7 @@ console.log(result.parsed);
 
 const client = new Discord.Client();
 const prefix = "!w ";
-const presense = function () {
+const presence = function () {
     const servers = client.guilds.cache.size;
     console.log(`Updating presence. Servers: ${servers}`);
     client.user
@@ -29,7 +29,7 @@ const presense = function () {
 client.on("ready", () => {
     // We logged in
     console.log(`Logged in as ${client.user.tag}!`);
-    presense();
+    presence();
     // 15 * 60 * (1 second)
     // Update presence every 15 minutes
     setInterval(() => presence(), 15 * 60 * 1000);
