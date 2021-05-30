@@ -4,7 +4,8 @@
   "description": "Welcome users when they join your discord server",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
