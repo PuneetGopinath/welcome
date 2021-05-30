@@ -6,4 +6,8 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
+client.on("guildMemberAdd", (member) => {
+    member.guild.channels.get('channelID').send("Welcome");
+});
+
 client.login(config.BOT_TOKEN);
