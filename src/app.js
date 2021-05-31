@@ -37,13 +37,11 @@ client.on("ready", () => {
 
 client.on("guildMemberAdd", (member) => {
     let channel;
-    channel = member.guild.channels.cache.find(
-        (ch) => ch.name === "welcome"
-    );
+    channel = member.guild.channels.cache.find((ch) => ch.name === "welcome");
     if (!channel) {
         channel = member.guild.channels.cache.find(
-        (ch) => ch.name === "general"
-    );
+            (ch) => ch.name === "general"
+        );
     }
     if (!channel) return;
     console.log(channel);
