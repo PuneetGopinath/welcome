@@ -27,6 +27,18 @@ const presence = function () {
         })
         .catch((error) => console.error(error));
 };
+const greetUser = function (guild, member) {
+    let channel;
+    channel = guild.channels.cache.find((ch) => ch.name === "welcome");
+    if (!channel) {
+        channel = guild.channels.cache.find(
+            (ch) => ch.name === "general"
+        );
+    }
+    if (!channel) return;
+    console.log("channel is set");
+    channel.send(`Welcome, ${member}`);
+}
 
 client.on("ready", () => {
     // We logged in
@@ -39,16 +51,7 @@ client.on("ready", () => {
 
 client.on("guildMemberAdd", (member) => {
     // When a new member joins
-    let channel;
-    channel = member.guild.channels.cache.find((ch) => ch.name === "welcome");
-    if (!channel) {
-        channel = member.guild.channels.cache.find(
-            (ch) => ch.name === "general"
-        );
-    }
-    if (!channel) return;
-    console.log(channel);
-    channel.send(`Welcome, ${member}`);
+    greetUser(member.guild, member);
 });
 
 client.on("message", function (message) {
@@ -58,13 +61,17 @@ client.on("message", function (message) {
             `Hi there, ${message.author}\nMy prefix is ${prefix.trim()}`
         );
     }
-    if (!message.content.startsWith(prefix)) return;
+    if (message.content.startsWith(prefix)) {
 
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(" ");
     const command = args.shift().toLowerCase();
     if (command === "ping") {
         message.reply(`Pong!`);
+    } else if (command === "test") {
+        //Test greetUser function
+        greetUser(message.guild, message.member);
+    }
     }
 });
 
