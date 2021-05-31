@@ -15,18 +15,6 @@ if (!process.env.BOT_TOKEN) {
 
 const client = new Discord.Client();
 const prefix = "!w ";
-const presence = function () {
-    const servers = client.guilds.cache.size;
-    console.log(`Updating presence. Servers: ${servers}`);
-    client.user
-        .setPresence({
-            activity: {
-                name: `${servers} server${servers > 1 ? "s" : ""}`,
-                type: "WATCHING",
-            },
-        })
-        .catch((error) => console.error(error));
-};
 const greetUser = function (guild, member) {
     let channel;
     channel = guild.channels.cache.find((ch) => ch.name === "new-members");
