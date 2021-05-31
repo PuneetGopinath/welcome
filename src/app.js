@@ -7,9 +7,9 @@ const Discord = require("discord.js");
 
 const result = require("dotenv").config();
 if (result.error) {
-    throw result.error;
+    console.error(result.error);
 }
-console.log(result.parsed);
+//console.log(result.parsed);
 
 const client = new Discord.Client();
 const prefix = "!w ";
