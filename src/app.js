@@ -36,10 +36,17 @@ client.on("ready", () => {
 });
 
 client.on("guildMemberAdd", (member) => {
-    const channel = member.guild.channels.cache.find(
+    let channel;
+    channel = member.guild.channels.cache.find(
         (ch) => ch.name === "welcome"
     );
+    if (!channel) {
+        channel = member.guild.channels.cache.find(
+        (ch) => ch.name === "general"
+    );
+    }
     if (!channel) return;
+    console.log(channel);
     channel.send(`Welcome, ${member}`);
 });
 
