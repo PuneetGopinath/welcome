@@ -10,3 +10,4 @@ const presence = function () {
         })
         .catch((error) => console.error(error));
 };
+module.exports = presence;
