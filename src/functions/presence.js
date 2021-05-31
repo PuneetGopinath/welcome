@@ -1,4 +1,4 @@
-const presence = function () {
+const presence = function (client) {
     const servers = client.guilds.cache.size;
     console.log(`Updating presence. Servers: ${servers}`);
     client.user

@@ -5,6 +5,9 @@
  */
 const Discord = require("discord.js");
 
+const presence = require('./functions/presence');
+const greetUser = require('./functions/greetUser');
+
 if (!process.env.BOT_TOKEN) {
     const result = require("dotenv").config();
     if (result.error) {
@@ -19,10 +22,10 @@ const prefix = "!w ";
 client.on("ready", () => {
     // We logged in
     console.log(`Logged in as ${client.user.tag}!`);
-    presence();
+    presence(client);
     // 15 * 60 * (1 second)
     // Update presence every 15 minutes
-    setInterval(() => presence(), 15 * 60 * 1000);
+    setInterval(() => presence(client), 15 * 60 * 1000);
 });
 
 client.on("guildMemberAdd", (member) => {
