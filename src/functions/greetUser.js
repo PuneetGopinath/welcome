@@ -8,3 +8,4 @@ const greetUser = function (guild, member) {
     console.log("channel is set");
     channel.send(`Welcome, ${member}`);
 };
+module.exports = greetUser;
