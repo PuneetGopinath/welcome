@@ -9,4 +9,4 @@ const greetUser = function (guild, member) {
     channel.send(`Welcome, ${member}`);
 };
 
-module.exports = greetUser
+module.exports = greetUser;
