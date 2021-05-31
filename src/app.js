@@ -29,7 +29,7 @@ const presence = function () {
 };
 const greetUser = function (guild, member) {
     let channel;
-    channel = guild.channels.cache.find((ch) => ch.name === "welcome");
+    channel = guild.channels.cache.find((ch) => ch.name === "new-members");
     if (!channel) {
         channel = guild.channels.cache.find((ch) => ch.name === "general");
     }
