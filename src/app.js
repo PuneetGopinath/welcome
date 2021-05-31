@@ -5,6 +5,9 @@
  */
 const Discord = require("discord.js");
 
+const presence = require("./functions/presence");
+const greetUser = require("./functions/greetUser");
+
 if (!process.env.BOT_TOKEN) {
     const result = require("dotenv").config();
     if (result.error) {
@@ -15,36 +18,14 @@ if (!process.env.BOT_TOKEN) {
 
 const client = new Discord.Client();
 const prefix = "!w ";
-const presence = function () {
-    const servers = client.guilds.cache.size;
-    console.log(`Updating presence. Servers: ${servers}`);
-    client.user
-        .setPresence({
-            activity: {
-                name: `${servers} server${servers > 1 ? "s" : ""}`,
-                type: "WATCHING",
-            },
-        })
-        .catch((error) => console.error(error));
-};
-const greetUser = function (guild, member) {
-    let channel;
-    channel = guild.channels.cache.find((ch) => ch.name === "new-members");
-    if (!channel) {
-        channel = guild.channels.cache.find((ch) => ch.name === "general");
-    }
-    if (!channel) return;
-    console.log("channel is set");
-    channel.send(`Welcome, ${member}`);
-};
 
 client.on("ready", () => {
     // We logged in
     console.log(`Logged in as ${client.user.tag}!`);
-    presence();
+    presence(client);
     // 15 * 60 * (1 second)
     // Update presence every 15 minutes
-    setInterval(() => presence(), 15 * 60 * 1000);
+    setInterval(() => presence(client), 15 * 60 * 1000);
 });
 
 client.on("guildMemberAdd", (member) => {
