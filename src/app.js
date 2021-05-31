@@ -5,11 +5,13 @@
  */
 const Discord = require("discord.js");
 
-const result = require("dotenv").config();
-if (result.error) {
-    console.error(result.error);
-}
+if (!process.env.BOT_TOKEN) {
+    const result = require("dotenv").config();
+    if (result.error) {
+        console.error(result.error);
+    }
 //console.log(result.parsed);
+}
 
 const client = new Discord.Client();
 const prefix = "!w ";
