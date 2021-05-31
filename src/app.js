@@ -31,14 +31,12 @@ const greetUser = function (guild, member) {
     let channel;
     channel = guild.channels.cache.find((ch) => ch.name === "welcome");
     if (!channel) {
-        channel = guild.channels.cache.find(
-            (ch) => ch.name === "general"
-        );
+        channel = guild.channels.cache.find((ch) => ch.name === "general");
     }
     if (!channel) return;
     console.log("channel is set");
     channel.send(`Welcome, ${member}`);
-}
+};
 
 client.on("ready", () => {
     // We logged in
@@ -62,16 +60,15 @@ client.on("message", function (message) {
         );
     }
     if (message.content.startsWith(prefix)) {
-
-    const commandBody = message.content.slice(prefix.length);
-    const args = commandBody.split(" ");
-    const command = args.shift().toLowerCase();
-    if (command === "ping") {
-        message.reply(`Pong!`);
-    } else if (command === "test") {
-        //Test greetUser function
-        greetUser(message.guild, message.member);
-    }
+        const commandBody = message.content.slice(prefix.length);
+        const args = commandBody.split(" ");
+        const command = args.shift().toLowerCase();
+        if (command === "ping") {
+            message.reply(`Pong!`);
+        } else if (command === "test") {
+            //Test greetUser function
+            greetUser(message.guild, message.member);
+        }
     }
 });
 
