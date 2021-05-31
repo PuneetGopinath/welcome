@@ -36,6 +36,7 @@ client.on("ready", () => {
 });
 
 client.on("guildMemberAdd", (member) => {
+    // When a new member joins
     let channel;
     channel = member.guild.channels.cache.find((ch) => ch.name === "welcome");
     if (!channel) {
@@ -50,7 +51,6 @@ client.on("guildMemberAdd", (member) => {
 
 client.on("message", function (message) {
     if (message.author.bot) return;
-    //https://discord.js.org/#/docs/main/v11/class/Message?scrollTo=isMemberMentioned
     if (message.mentions.has(client.user)) {
         message.channel.send(
             `Hi there, ${message.author}\nMy prefix is ${prefix.trim()}`
