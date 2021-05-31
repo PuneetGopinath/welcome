@@ -19,9 +19,10 @@ Commands:
 The bot requires the following permissions:
 - Read messages
 - Send messages
+- Read Message History
 
 To invite the bot with all the necessary required permissions mentioned above you can use this invitation link:
-> https://discord.com/oauth2/authorize?scope=bot&client_id=848459799783669790&permissions=3072
+> https://discord.com/oauth2/authorize?scope=bot&client_id=848459799783669790&permissions=68608
 
 If you want to add the bot without a pre-made role, use this link instead:
 > https://discord.com/oauth2/authorize?scope=bot&client_id=848459799783669790&permissions=0
