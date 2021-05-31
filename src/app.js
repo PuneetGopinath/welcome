@@ -47,7 +47,7 @@ client.on("guildMemberAdd", (member) => {
         );
     }
     if (!channel) return;
-    console.log(channel);
+    console.log("channel is set");
     channel.send(`Welcome, ${member}`);
 });
 
