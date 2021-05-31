@@ -5,7 +5,7 @@
  */
 const Discord = require("discord.js");
 
-const presence = require('./functions/presence')
+const presence = require('./functions/presence');
 const greetUser = require('./functions/greetUser');
 
 if (!process.env.BOT_TOKEN) {
