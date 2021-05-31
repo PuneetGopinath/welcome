@@ -10,7 +10,7 @@
 ## Commands
 > Prefix: `!w`
 
-If You're not sure what prefix is used can you just mention the bot (`@welcome#0914`) and it will tell you what prefix is used.
+If You're not sure what prefix is used can you just mention the bot (`@welcome-bot#0914`) and it will tell you what prefix is used.
 
 Commands:
 1. `!w ping` - Ping the bot.
