@@ -15,16 +15,6 @@ if (!process.env.BOT_TOKEN) {
 
 const client = new Discord.Client();
 const prefix = "!w ";
-const greetUser = function (guild, member) {
-    let channel;
-    channel = guild.channels.cache.find((ch) => ch.name === "new-members");
-    if (!channel) {
-        channel = guild.channels.cache.find((ch) => ch.name === "general");
-    }
-    if (!channel) return;
-    console.log("channel is set");
-    channel.send(`Welcome, ${member}`);
-};
 
 client.on("ready", () => {
     // We logged in
