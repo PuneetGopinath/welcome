@@ -10,7 +10,7 @@ if (!process.env.BOT_TOKEN) {
     if (result.error) {
         console.error(result.error);
     }
-//console.log(result.parsed);
+    //console.log(result.parsed);
 }
 
 const client = new Discord.Client();
