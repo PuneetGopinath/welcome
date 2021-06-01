@@ -1,5 +1,5 @@
 # Not ready for use
-Hi all, this bot does not work properly yet, don't invite it to your server.
+Hi all, this bot does not work properly yet, don't invite it to your server (you can invite, but only the ping command currently works)
 
 I have seen today (Jun 1) morning, that the bot showed "Watching 3 servers" but I only added it to 2 servers, that is why I updated the readme as soon as I saw that.
 
