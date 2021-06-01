@@ -11,7 +11,6 @@ const greetUser = function (guild, member) {
         channel = guild.channels.cache.find((ch) => ch.name === "general");
     }
     if (!channel) return;
-    console.log("channel is set");
     channel.send(`Welcome, ${member}`);
 };
 
