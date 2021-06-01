@@ -45,10 +45,10 @@ client.on("message", function (message) {
         const args = commandBody.split(" ");
         const command = args.shift().toLowerCase();
         switch (command) {
-           case "ping":
+            case "ping":
                 message.reply(`Pong!`);
                 break;
-           case "test":
+            case "test":
                 //Test greetUser function
                 greetUser(message.guild, message.member);
                 break;
