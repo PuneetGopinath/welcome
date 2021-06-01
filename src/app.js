@@ -44,11 +44,14 @@ client.on("message", function (message) {
         const commandBody = message.content.slice(prefix.length);
         const args = commandBody.split(" ");
         const command = args.shift().toLowerCase();
-        if (command === "ping") {
-            message.reply(`Pong!`);
-        } else if (command === "test") {
-            //Test greetUser function
-            greetUser(message.guild, message.member);
+        switch (command) {
+           case "ping":
+                message.reply(`Pong!`);
+                break;
+           case "test":
+                //Test greetUser function
+                greetUser(message.guild, message.member);
+                break;
         }
     }
 });
