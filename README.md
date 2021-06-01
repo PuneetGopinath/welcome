@@ -1,8 +1,3 @@
-# Not ready for use
-Hi all, this bot does not work properly yet, don't invite it to your server (you can invite, but only the ping command currently works)
-
-I have seen today (Jun 1) morning, that the bot showed "Watching 3 servers" but I only added it to 2 servers, that is why I updated the readme as soon as I saw that.
-
 # Discord welcome bot
 > A discord.js bot to welcome users in your server
 
@@ -19,6 +14,7 @@ If You're not sure what prefix is used can you just mention the bot (`@welcome-b
 
 Commands:
 1. `!w ping` - Ping the bot.
+2. `!w test` - Test by welcome message
 
 ## Inviting the bot
 The bot requires the following permissions:
