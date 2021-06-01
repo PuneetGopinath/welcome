@@ -1,3 +1,8 @@
+# Not ready for use
+Hi all, this bot does not work properly yet, don't invite it to your server.
+
+I have seen today (Jun 1) morning, that the bot showed "Watching 3 servers" but I only added it to 2 servers, that is why I updated the readme as soon as I saw that.
+
 # Discord welcome bot
 > A discord.js bot to welcome users in your server
 
