@@ -1,5 +1,5 @@
 # UPDATE
-This repo is now maintained at [`Welcome-Bot`](https://github.com/Welcome-Bot)/[`welcome-bot`](https://github.com/BaalKrshna/welcome-bot)
+This repo is now maintained at [`Welcome-Bot`](https://github.com/Welcome-Bot)/[`welcome-bot`](https://github.com/Welcome-Bot/welcome-bot)
 
 # Discord welcome bot
 > A discord.js bot to welcome users in your server
